@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 85vh;
+}
+.container__img-src {
+  width: 35vw;
+  object-fit: contain;
+}
+.container__img {
+  width: 45vw;
+  border-radius: 15px;
+}
+.container__text {
+  width: 55vw;
+}
+.description-img{
+   height: 30px;
+}
+.contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.contenedor figure {
+  position: relative;
+  height: 50vh;
+  cursor: pointer;
+  width: 40vw;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+.contenedor figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+}
+.contenedor figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 103, 123, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.contenedor figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.contenedor figure:hover > .capa h3 {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.contenedor figure:hover > img {
+  transform: scale(1.3);
+}
+.contenedor figure .capa h3 {
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+  margin-top: 30px;
+}
+.contenedor figure .capa p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+.text-title{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.text-description{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.text-plataforma{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width:768px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contenedor{
+    height: 50vh;
+    margin-top: 280px;
+  }
+  .contenedor figure {
+    height: 35vh;
+    width: 80vw;
+  }
+  .container__text {
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .text-description{
+    width: 100vw;
+    padding: 7px;
+  }
+  .text-plataforma{
+     margin-left: 10%;
+     margin-bottom: 50px;
+  }
+}
+
+

@@ -1,0 +1,40 @@
+<div *ngIf="product" class="container">
+  <div class="contenedor">
+    <a [href]="product.freetogame_profile_url" target="_blank">
+         <figure>
+             <img [src]="product.thumbnail">
+             <div class="capa">
+                 <h3>Desarrollador : {{ product.developer }}</h3>
+                 <p>Fecha : {{ product.release_date }}</p>
+             </div>
+         </figure>
+     </a>
+ </div>
+
+  <div class="container__text">
+   <div class="text-title">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAjBJREFUSEvV1kvoDlEYx/HPP5RCbmWBhZ2FrOUWIqHctlJsJNcNiYV7yMKCBbKisFOkSHJLylayUBbExsa9KEKPztE0Zt6Z9/WvP2c1c87zPN/z/J7znJk+AzT6BoirCTwSazCmyw2+wTm8r/NrAm/AyS6h2XwjTvUK3oe9PYL3I/wrRzHjmbiK0S1sO+3lR83iWyzFg1gvgnfjQIeITWXJrnXgWN+Dg2VwUdaQKcZczEnP3YLv4W7yzeX6LX8xWBGc56vmmkqeMy7W+I+5fwK8C4dTOoPwPZ3KLFO3UueMB+NrirsTR8s13oITyWAs4hLoD6kn4FWKuynfC8UsluFKMpiVjn1/gBfjWoq7CDfKGY/D65Ik/QEOaXek0oWS78rgeH+IaXiKKYje/psaB/QZxuMmFuaWKB+YVbiQFkP2F9ia3kfgU0Mvhc2HZHM6bX52el+C63XgmI8a/N5ZAZTr3ok9D7crDCKZ1cX5qhYZjovpXi3aXsbKhoyrNn0Gmwst9StEp96Mq3IF5mNqAm7HsRr4EUSfxniUlDuPx1X2bS6FobiFGSnAJRzH/fS+HOsRbRMjvj4L8KWTOm3A4T8qnfjJDVI/wXR8bLBr/PUp+g/DOmzDxFLgl6kEUc/PTdCmGtf5D0n9HT0eIy6ZQ/jWBpht2kpdjhnf6TtpMloof3dbs/8bcGSW/0jK2cUfRyjRanSb8YCB12JSTUrPcbZVug03V9sYPdl1K3VPkCqnn+8sdB8wv+hWAAAAAElFTkSuQmCC"/>
+    <h2>Game : {{ product.title }}</h2>
+   </div>
+    <div class="text-description">
+      <img class="description-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAN5JREFUSEvtl9kNwjAMQF9n4JtjAGbgmAKGQRxiGZiCYwYGAIlfZgBZalAUhYgKpy5S/dc08bMdJ3YKjKQw4tI4cAcYws+GPYEL8AgjG/N4CyyUt0B0Ln2dIbgH3JShTl0XuLuPEDwCTpnAY+D8CTwBDpnAU+D4LVjCfi0ni8Ui/ljKxgHQ9yZUAm+AdblYMlTEH0uBZd3q78BmodbMs0p7bOZxm1y1neM2udqbK1uRqC25zBoBqZ+u/mp6K7qkPr/bqliztwNmytQ9ME81e+6fSXur7GxcXeNeEtm9fgHyBGIfD4jI6gAAAABJRU5ErkJggg=="/>
+      <p>Description : {{ product.short_description }}</p>
+    </div>
+    <p>Url Game : {{ product.game_url }}</p>
+    <p>Genero : {{ product.genre }}</p>
+    <p>Publicitador : {{ product.publisher }}</p>
+    <p>Perfil del Juego : {{ product.freetogame_profile_url }}</p>
+    <div class="text-plataforma" *ngIf="product.platform==='Web Browser'">
+      <h6>Plataforma : </h6>
+      <h6>Web Browser</h6>
+      <img src="../../../assets/images/web.png" width="90px" alt="">
+    </div>
+
+    <div class="text-plataforma" *ngIf="product.platform==='Windows'">
+      <h6>Plataforma : </h6>
+      <h6>Windows</h6>
+      <img src="../../../assets/images/windows.png" width="90px" alt="">
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

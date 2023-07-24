@@ -1,0 +1,101 @@
+.container__Product{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+.container{
+    display: grid;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1400px;
+    margin-bottom: 50px;
+}
+.container-filtros{
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    position: fixed;
+    top: 170px; /* Posiciona el contenedor en la parte superior */
+    left: 50px; /* Puedes ajustar esta propiedad según tus necesidades */
+    width: 200px; /* Puedes ajustar el ancho del contenedor de filtros según tus necesidades */
+    height: 100vh; /* El contenedor de filtros ocupará toda la altura de la ventana */
+}
+.container-buscador{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    border-radius: 5px;
+    text-align: center;
+    height: 35px;
+}
+input::placeholder{
+    text-align: center;
+}
+@media (max-width:1351px){
+    .pagination{
+        margin-top: 2000px;
+    }
+
+}
+@media (max-width:768px){
+   .container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   }
+   .container-filtros{
+    position:initial;
+    width: 90vw;
+    height: 40vh;
+    display: grid;
+    grid-template-areas: 
+    "search search"
+    "search search"
+    "platform genre"
+    "platform genre";
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+   }
+   .container__Product{
+    margin-left: 3.5%;
+   }
+   .container-buscador{
+    width: 75%;
+    grid-area: search;
+    padding: 0;
+    height: 150px;
+    margin-left: 12%;
+   }
+   .container-platform{
+    grid-area: platform;
+    height: 150px;
+    width: 150px;
+    margin: 0px;
+    padding: 0px;
+   }
+   .container-genre{
+    grid-area: genre;
+    height: 150px;
+    width: 150px;
+    margin: 0px;
+    padding: 0px;
+   }
+   .pagination{
+    margin-top: 4600px;
+}
+  }

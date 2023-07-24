@@ -1,0 +1,15 @@
+<div *ngIf="product" class="card">
+    <img class="card-img-top" [src]="product.thumbnail" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.short_description }}</p>
+        <div>
+            <a [routerLink]="['/detail/' + product.id]" class="btn btn-primary">Ver Mas</a>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="!product"> <!-- Si NO existe el objeto "product", se muestra el contenido dentro de este div -->
+    <p>Producto no Renderizado</p> <!-- Se muestra el mensaje "Producto no Renderizado" -->
+</div>
